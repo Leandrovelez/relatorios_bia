@@ -18,8 +18,8 @@ class RelatorioController extends Controller
 
         Excel::import(new RelatorioImport, $request->file('arquivo')->store('temp'));
         
-        //return Excel::download(new RelatorioExport, 'planilha-consolidada-curso.xlsx');
-        return Excel::download(new DominioExport, 'planilha-consolidada-dominio.xlsx');
+        return Excel::download(new RelatorioExport, 'planilha-consolidada-curso.xlsx');
+        //return Excel::download(new DominioExport, 'planilha-consolidada-dominio.xlsx');
 
     }
 }
